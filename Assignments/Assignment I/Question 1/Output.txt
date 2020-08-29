@@ -1,0 +1,33 @@
+num =
+
+   772   714  -675   109   927  -452  -755  -790   -97
+
+#After sorting
+num =
+
+  -790  -755  -675  -452   -97   109   714   772   927
+
+#minimum term
+small =
+
+  -790
+
+#maximum term
+large =
+
+   927
+
+
+average =
+
+  -27.4444
+
+#median term
+middle =
+
+   -97
+
+
+std_dev =
+
+  692.2494

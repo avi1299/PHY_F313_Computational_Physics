@@ -1,0 +1,53 @@
+#We are doing a polynomial fit for y=x^2
+x =
+
+     1
+     2
+     3
+     4
+     5
+     6
+     7
+     8
+     9
+    10
+
+
+y =
+
+     1
+     4
+     9
+    16
+    25
+    36
+    49
+    64
+    81
+   100
+
+#Adding the error upto 10% in the value of y 
+y =
+
+    1.0629
+    4.3246
+    8.3286
+   17.3228
+   25.6618
+   33.1023
+   46.8293
+   64.6001
+   88.4116
+  109.2978
+
+#(a,b,c)Coefficients of the Polynomial equation(a*x^2+b*x+c) that fits the given points. 
+c =
+
+    4.1591
+   -2.7087
+    1.3151
+
+#Representing the polynomial equation that fit the points 
+p =
+ 
+(2341391877989993*x^2)/562949953421312 - (3049683697756407*x)/1125899906842624 + 2961419699329173/2251799813685248

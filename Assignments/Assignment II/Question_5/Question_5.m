@@ -1,0 +1,14 @@
+k=1;
+alpha=1;
+%V=@(r)-k*exp(-alpha*dsit(r))/dist(r);
+%F=@(r)k*alpha*exp(alpha*dist(r))/dist(r)^3*r;
+N=10000;t0=0;tN=109;
+x0=0;xdot0=0;z0=0;zdot0=1;y0=0.5;ydot0=0;
+f1=@(t,y1,y2,y3,y4,y5,y6)y2;
+f3=@(t,y1,y2,y3,y4,y5,y6)y4;
+f5=@(t,y1,y2,y3,y4,y5,y6)y6;
+f2=@(t,y1,y2,y3,y4,y5,y6)(-k*exp(-alpha*dist(y1,y3,y5))/dist(y1,y3,y5)^3*(alpha*dist(y1,y3,y5)+1))*y1;
+f4=@(t,y1,y2,y3,y4,y5,y6)(-k*exp(-alpha*dist(y1,y3,y5))/dist(y1,y3,y5)^3*(alpha*dist(y1,y3,y5)+1))*y3;
+f6=@(t,y1,y2,y3,y4,y5,y6)(-k*exp(-alpha*dist(y1,y3,y5))/dist(y1,y3,y5)^3*(alpha*dist(y1,y3,y5)+1))*y5;
+[x,y1,y2,y3,y4,y5,y6]=RK4_new(N,t0,tN,x0,xdot0,y0,ydot0,z0,zdot0,f1,f2,f3,f4,f5,f6);
+plot3(y1,y3,y5);
